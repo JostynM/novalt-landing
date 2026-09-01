@@ -1,0 +1,299 @@
+/* =========================
+   SOBRE MÍ
+========================= */
+
+.about {
+  position: relative;
+
+  width: 100%;
+
+  padding: 140px 0;
+
+  background-color: var(--color-black);
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.about__container {
+  width: min(
+    92%,
+    var(--container-width)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.about__header {
+  padding-bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.about__label {
+  color: var(--color-purple-light);
+
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.22em;
+}
+
+
+.about__number {
+  color: var(--color-gray);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+.about__content {
+  margin-top: 80px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1fr)
+    minmax(0, 1.2fr);
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.about__media {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 520px;
+
+  overflow: hidden;
+
+  background-color: var(--color-gray-dark);
+}
+
+
+.about__image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transform: scale(1);
+
+  transition:
+    transform 900ms
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+/* CAPA SOBRE FOTO */
+
+.about__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 5, 5, 0.02) 0%,
+      rgba(5, 5, 5, 0.12) 55%,
+      rgba(5, 5, 5, 0.55) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* HOVER FOTO */
+
+.about__media:hover
+.about__image {
+  transform: scale(1.035);
+}
+
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.about__info {
+  min-width: 0;
+}
+
+
+/* PRODUCER · BEATMAKER */
+
+.about__eyebrow {
+  margin-bottom: 22px;
+
+  color: var(--color-purple-light);
+
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.2em;
+}
+
+
+/* NOVALT */
+
+.about__title {
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-size: clamp(
+    4rem,
+    5vw,
+    6.5rem
+  );
+
+  font-weight: 700;
+
+  line-height: 0.85;
+
+  letter-spacing: -0.05em;
+}
+
+
+/* DESCRIPCIÓN */
+
+.about__description {
+  max-width: 430px;
+
+  margin-top: 35px;
+
+  color: var(--color-gray);
+
+  font-size: 1rem;
+
+  line-height: 1.9;
+}
+
+
+/* =========================
+   SPOTIFY
+========================= */
+
+.about__spotify {
+  width: 100%;
+
+  min-width: 0;
+}
+
+
+/* IFRAME REAL */
+
+.about__spotify iframe {
+  display: block;
+
+  width: 100%;
+
+  min-height: 352px;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  background-color: #121212;
+}
+
+
+/* =========================
+   PLACEHOLDER SPOTIFY
+========================= */
+
+.about__spotify-placeholder {
+  width: 100%;
+
+  min-height: 352px;
+
+  padding: 35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(140, 53, 255, 0.08)
+    );
+}
+
+
+.about__spotify-placeholder p {
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+}
+
+
+.about__spotify-placeholder span {
+  color: var(--color-gray);
+
+  font-size: 0.85rem;
+
+  letter-spacing: 0.08em;
+}

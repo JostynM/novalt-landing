@@ -1,0 +1,17 @@
+:root {
+  --color-black: #050505;
+  --color-white: #ffffff;
+
+  --color-purple: #8c35ff;
+  --color-purple-light: #a963ff;
+  --color-purple-dark: #5b00c9;
+
+  --color-gray: #b8b8b8;
+  --color-gray-dark: #242424;
+
+  --container-width: 1500px;
+  --header-height: 100px;
+
+  --transition-fast: 200ms ease;
+  --transition-normal: 350ms ease;
+}

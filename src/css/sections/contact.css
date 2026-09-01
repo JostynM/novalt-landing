@@ -1,0 +1,301 @@
+/* =========================
+   CONTACTO
+========================= */
+
+.contact {
+  position: relative;
+
+  width: 100%;
+
+  padding: 140px 0 60px;
+
+  background-color: var(--color-black);
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contact__container {
+  width: min(
+    92%,
+    var(--container-width)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   PARTE SUPERIOR
+========================= */
+
+.contact__top {
+  padding: 100px 0 110px;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.contact__label {
+  margin: 0 0 36px;
+
+  color: #c79a4b;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.25em;
+}
+
+
+.contact__info {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 24px;
+}
+
+
+.contact__info-link {
+  color: var(--color-gray);
+
+  font-size: 1.9rem;
+  font-weight: 300;
+
+  text-decoration: none;
+
+  transition:
+    color var(--transition-normal),
+    transform var(--transition-normal);
+}
+
+
+.contact__info-link:hover {
+  color: var(--color-white);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   BLOQUE CENTRAL
+========================= */
+
+.contact__center {
+  padding: 110px 0 90px;
+
+  text-align: center;
+}
+
+
+.contact__eyebrow {
+  margin: 0 0 20px;
+
+  color: var(--color-purple-light);
+
+  font-size: 0.78rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.22em;
+}
+
+
+.contact__title {
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-size: clamp(
+    4rem,
+    9vw,
+    8rem
+  );
+
+  font-weight: 700;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.05em;
+}
+
+
+.contact__description {
+  max-width: 640px;
+
+  margin: 30px auto 0;
+
+  color: var(--color-gray);
+
+  font-size: 1rem;
+
+  line-height: 1.9;
+}
+
+
+.contact__cta {
+  margin-top: 40px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 16px 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  color: var(--color-white);
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  letter-spacing: 0.14em;
+
+  transition:
+    border-color var(--transition-normal),
+    background-color var(--transition-normal),
+    color var(--transition-normal),
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+
+.contact__cta:hover {
+  border-color: var(--color-purple);
+
+  background-color: rgba(140, 53, 255, 0.12);
+
+  box-shadow: 0 0 20px rgba(140, 53, 255, 0.18);
+
+  transform: translateY(-2px);
+}
+
+
+.contact__cta-arrow {
+  transition:
+    transform var(--transition-normal);
+}
+
+
+.contact__cta:hover .contact__cta-arrow {
+  transform: translate(4px, -4px);
+}
+
+
+/* =========================
+   PARTE INFERIOR
+========================= */
+
+.contact__bottom {
+  padding-top: 45px;
+
+  display: grid;
+
+  grid-template-columns:
+    auto 1fr auto;
+
+  align-items: center;
+
+  gap: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.contact__brand {
+  color: var(--color-white);
+
+  font-size: 2rem;
+  font-weight: 500;
+
+  letter-spacing: 0.18em;
+
+  text-decoration: none;
+}
+
+
+.contact__socials {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 42px;
+}
+
+
+.contact__social-link {
+  position: relative;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.22em;
+
+  text-decoration: none;
+
+  transition:
+    color var(--transition-normal);
+}
+
+
+.contact__social-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 1px;
+
+  background-color: var(--color-purple);
+
+  transition: width var(--transition-normal);
+}
+
+
+.contact__social-link:hover {
+  color: var(--color-white);
+}
+
+
+.contact__social-link:hover::after {
+  width: 100%;
+}
+
+
+.contact__copyright {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 0.72rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+
+  text-align: right;
+}

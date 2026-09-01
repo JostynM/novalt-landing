@@ -1,0 +1,1095 @@
+/* ========================================
+   TABLETS Y PANTALLAS MEDIANAS
+   Hasta 1000px
+======================================== */
+
+@media (max-width: 1000px) {
+
+  /* =========================
+     HEADER
+  ========================= */
+
+  .header__container {
+    width: 94%;
+  }
+
+
+  .nav__list {
+    gap: 24px;
+  }
+
+
+  /* =========================
+     HERO
+  ========================= */
+
+  .hero__container {
+    width: 92%;
+  }
+
+
+  .hero__content {
+    max-width: 560px;
+  }
+
+
+  .hero__title {
+    font-size: clamp(
+      5rem,
+      9vw,
+      7rem
+    );
+  }
+
+}
+
+
+
+/* ========================================
+   TABLETS Y CELULARES
+   Hasta 768px
+======================================== */
+
+@media (max-width: 768px) {
+
+
+  /* ========================================
+     VARIABLES MOBILE
+  ========================================= */
+
+  :root {
+    --header-height: 85px;
+  }
+
+
+
+  /* ========================================
+     HEADER
+  ========================================= */
+
+  .header {
+    height: var(--header-height);
+
+    background-color:
+      rgba(5, 5, 5, 0.98);
+  }
+
+
+  .header__container {
+    width: calc(100% - 32px);
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .header__logo img {
+    width: 95px;
+    height: auto;
+  }
+
+
+
+  /* ========================================
+     NAVEGACIÓN MOBILE
+  ========================================= */
+
+  .nav {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+
+    background-color:
+      var(--color-black);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+      translateY(-20px);
+
+    transition:
+      opacity var(--transition-normal),
+      visibility var(--transition-normal),
+      transform var(--transition-normal);
+  }
+
+
+  .nav.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+      translateY(0);
+  }
+
+
+  .nav__list {
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 28px;
+  }
+
+
+  .nav__link {
+    font-size: 1.1rem;
+
+    letter-spacing: 0.1em;
+  }
+
+
+  .header__contact {
+    min-width: 200px;
+
+    height: 50px;
+  }
+
+
+
+  /* ========================================
+     BOTÓN HAMBURGUESA
+  ========================================= */
+
+  .menu-toggle {
+    display: block;
+
+    margin-left: auto;
+
+    z-index: 1100;
+  }
+
+
+
+  /* ========================================
+     HERO
+  ========================================= */
+
+  .hero {
+    width: 100%;
+
+    min-height: auto;
+
+    overflow: hidden;
+  }
+
+
+  .hero__media {
+    position: relative;
+
+    top: auto;
+    right: auto;
+
+    width: 100%;
+
+    height: 48vh;
+
+    min-height: 350px;
+
+    margin-top:
+      var(--header-height);
+
+    overflow: hidden;
+  }
+
+
+  .hero__media img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position:
+      58% center;
+  }
+
+
+  .hero__overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 5, 5, 0.05) 0%,
+        rgba(5, 5, 5, 0.12) 45%,
+        rgba(5, 5, 5, 0.65) 75%,
+        var(--color-black) 100%
+      );
+  }
+
+
+  .hero__container {
+    width:
+      calc(100% - 40px);
+
+    min-height: auto;
+
+    margin:
+      -25px auto 0;
+
+    padding-top: 0;
+
+    padding-bottom: 60px;
+
+    display: block;
+  }
+
+
+  .hero__content {
+    width: 100%;
+
+    max-width: none;
+  }
+
+
+  .hero__eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 0.64rem;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.1em;
+
+    white-space: nowrap;
+  }
+
+
+  .hero__eyebrow span {
+    margin: 0 5px;
+  }
+
+
+  .hero__title {
+    width: 100%;
+
+    margin: 0;
+
+    font-size: clamp(
+      4.5rem,
+      19vw,
+      5.8rem
+    );
+
+    line-height: 0.85;
+
+    letter-spacing: -0.045em;
+
+    white-space: nowrap;
+  }
+
+
+  .hero__tagline {
+    margin-top: 15px;
+
+    font-size: 0.82rem;
+
+    letter-spacing: 0.28em;
+
+    white-space: nowrap;
+  }
+
+
+  .hero__line {
+    width: 65px;
+    height: 3px;
+
+    margin-top: 22px;
+
+    margin-bottom: 25px;
+  }
+
+
+  .hero__description {
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+  }
+
+
+  .hero__actions {
+    width: 100%;
+
+    margin-top: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 14px;
+  }
+
+
+  .hero__actions .button {
+    width: 100%;
+
+    min-height: 64px;
+
+    padding: 0 25px;
+
+    justify-content:
+      space-between;
+  }
+
+
+  .hero__scroll {
+    position: relative;
+
+    left: auto;
+    bottom: auto;
+
+    width: max-content;
+
+    margin:
+      55px auto 0;
+
+    align-items: center;
+  }
+
+
+
+  /* ========================================
+     SERVICIOS
+  ========================================= */
+
+  .services {
+    padding: 90px 0;
+  }
+
+
+  .services__container {
+    width:
+      calc(100% - 40px);
+  }
+
+
+  .services__intro {
+    margin-top: 45px;
+
+    margin-bottom: 55px;
+
+    display: block;
+  }
+
+
+  .services__title {
+    font-size: clamp(
+      2.8rem,
+      12vw,
+      4.5rem
+    );
+  }
+
+
+  .services__description {
+    max-width: 100%;
+
+    margin-top: 30px;
+  }
+
+
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .service-card {
+    min-height: 390px;
+  }
+
+
+  .service-card__content {
+    min-height: 390px;
+
+    padding: 25px;
+  }
+
+
+  .service-card__number {
+    top: 24px;
+
+    left: 25px;
+  }
+
+
+  .service-card__arrow {
+    top: 18px;
+
+    right: 25px;
+  }
+
+
+  .service-card__title {
+    font-size: 1.65rem;
+  }
+
+
+  .service-card__text {
+    font-size: 0.88rem;
+  }
+
+
+
+  /* ========================================
+     PRODUCCIONES
+  ========================================= */
+
+  .productions {
+    padding: 90px 0;
+  }
+
+
+  .productions__container {
+    width:
+      calc(100% - 40px);
+  }
+
+
+  .productions__intro {
+    margin-top: 45px;
+
+    margin-bottom: 65px;
+
+    display: block;
+  }
+
+
+  .productions__title {
+    font-size: clamp(
+      2.8rem,
+      12vw,
+      4.5rem
+    );
+  }
+
+
+  .productions__description {
+    max-width: 100%;
+
+    margin-top: 28px;
+  }
+
+
+  .productions__list {
+    gap: 90px;
+  }
+
+
+  .production {
+    width: 100%;
+  }
+
+
+  .production__info {
+    gap: 18px;
+  }
+
+
+  .production__title {
+    font-size: 1.1rem;
+  }
+
+
+
+  /* ========================================
+     BEATS
+  ========================================= */
+
+  .beats {
+    padding: 90px 0;
+  }
+
+
+  .beats__container {
+    width:
+      calc(100% - 40px);
+  }
+
+
+  .beats__intro {
+    margin-top: 45px;
+
+    margin-bottom: 50px;
+
+    display: block;
+  }
+
+
+  .beats__title {
+    font-size: clamp(
+      2.8rem,
+      12vw,
+      4.5rem
+    );
+  }
+
+
+  .beats__description {
+    max-width: 100%;
+
+    margin-top: 28px;
+  }
+
+
+  .beats__grid {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+
+  .beat-card__title {
+    font-size: 1.35rem;
+  }
+
+
+  .beats__footer {
+    margin-top: 45px;
+  }
+
+
+  .beats__button {
+    width: 100%;
+
+    justify-content:
+      space-between;
+  }
+
+
+
+  /* ========================================
+     SOBRE MÍ
+  ========================================= */
+
+  .about {
+    padding: 90px 0;
+  }
+
+
+  .about__container {
+    width:
+      calc(100% - 40px);
+  }
+
+
+  .about__content {
+    margin-top: 50px;
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .about__media {
+    min-height: 430px;
+  }
+
+
+  .about__title {
+    font-size: clamp(
+      4rem,
+      20vw,
+      6rem
+    );
+  }
+
+
+  .about__description {
+    max-width: 100%;
+
+    margin-top: 28px;
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+  }
+
+
+  .about__spotify {
+    width: 100%;
+  }
+
+
+  .about__spotify iframe,
+  .about__spotify-placeholder {
+    width: 100%;
+
+    min-height: 352px;
+  }
+
+
+
+/* ========================================
+   CONTACTO MOBILE
+======================================== */
+
+.contact {
+  padding: 40px 0 25px;
+}
+
+
+/* =========================
+   BLOQUE PRINCIPAL
+========================= */
+
+.contact__center {
+  padding: 35px 0 45px;
+}
+
+
+.contact__eyebrow {
+  margin-bottom: 18px;
+
+  font-size: 0.68rem;
+
+  text-align: center;
+
+  letter-spacing: 0.2em;
+}
+
+
+.contact__title {
+  margin: 0 auto;
+
+  max-width: 430px;
+
+  font-size: clamp(
+    3rem,
+    13vw,
+    4.5rem
+  );
+
+  line-height: 0.92;
+
+  text-align: center;
+}
+
+
+.contact__description {
+  max-width: 410px;
+
+  margin: 28px auto 0;
+
+  font-size: 0.92rem;
+
+  line-height: 1.8;
+
+  text-align: center;
+}
+
+
+.contact__cta {
+  width: 100%;
+
+  margin-top: 32px;
+
+  min-height: 62px;
+
+  justify-content: center;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.contact__bottom {
+  width: 100%;
+
+  padding-top: 32px;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 22px;
+
+  text-align: center;
+}
+
+
+/* NOVALT */
+
+.contact__brand {
+  justify-self: center;
+
+  font-size: 1.8rem;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================
+   REDES
+========================= */
+
+.contact__socials {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+.contact__social-link {
+  display: block;
+
+  padding: 8px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.72rem;
+
+  text-align: center;
+
+  letter-spacing: 0.13em;
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.contact__copyright {
+  margin-top: 4px;
+
+  text-align: center;
+
+  font-size: 0.6rem;
+}
+
+
+/* ========================================
+   CELULARES PEQUEÑOS
+   Hasta 430px
+======================================== */
+
+@media (max-width: 430px) {
+
+
+  /* ========================================
+     HEADER
+  ========================================= */
+
+  .header__container {
+    width:
+      calc(100% - 28px);
+  }
+
+
+  .header__logo img {
+    width: 90px;
+  }
+
+
+
+  /* ========================================
+     HERO
+  ========================================= */
+
+  .hero__media {
+    height: 45vh;
+
+    min-height: 330px;
+  }
+
+
+  .hero__media img {
+    object-position:
+      60% center;
+  }
+
+
+  .hero__container {
+    width:
+      calc(100% - 32px);
+
+    margin-top: -20px;
+  }
+
+
+  .hero__eyebrow {
+    font-size: 0.58rem;
+
+    letter-spacing: 0.08em;
+  }
+
+
+  .hero__eyebrow span {
+    margin: 0 4px;
+  }
+
+
+  .hero__title {
+    font-size: clamp(
+      4rem,
+      18vw,
+      5.2rem
+    );
+  }
+
+
+  .hero__tagline {
+    font-size: 0.76rem;
+
+    letter-spacing: 0.24em;
+  }
+
+
+  .hero__description {
+    font-size: 0.9rem;
+  }
+
+
+  .hero__actions .button {
+    min-height: 60px;
+
+    padding:
+      0 22px;
+
+    font-size: 0.7rem;
+  }
+
+
+
+  /* ========================================
+     SERVICIOS
+  ========================================= */
+
+  .services__container {
+    width:
+      calc(100% - 32px);
+  }
+
+
+  .service-card {
+    min-height: 360px;
+  }
+
+
+  .service-card__content {
+    min-height: 360px;
+
+    padding: 22px;
+  }
+
+
+  .service-card__number {
+    top: 22px;
+
+    left: 22px;
+  }
+
+
+  .service-card__arrow {
+    top: 17px;
+
+    right: 22px;
+  }
+
+
+  .service-card__title {
+    font-size: 1.45rem;
+  }
+
+
+
+  /* ========================================
+     PRODUCCIONES
+  ========================================= */
+
+  .productions__container {
+    width:
+      calc(100% - 32px);
+  }
+
+
+  .productions__list {
+    gap: 70px;
+  }
+
+
+  .production__info {
+    margin-top: 16px;
+
+    padding-top: 14px;
+  }
+
+
+  .production__artist {
+    font-size: 0.65rem;
+  }
+
+
+  .production__title {
+    font-size: 1rem;
+  }
+
+
+
+  /* ========================================
+     BEATS
+  ========================================= */
+
+  .beats__container {
+    width:
+      calc(100% - 32px);
+  }
+
+
+  .beats__grid {
+    gap: 35px;
+  }
+
+
+  .beat-card__content {
+    padding-top: 18px;
+  }
+
+
+  .beat-card__title {
+    font-size: 1.25rem;
+  }
+
+
+
+  /* ========================================
+     SOBRE MÍ
+  ========================================= */
+
+  .about__container {
+    width:
+      calc(100% - 32px);
+  }
+
+
+  .about__media {
+    min-height: 380px;
+  }
+
+
+  .about__content {
+    gap: 35px;
+  }
+
+
+  .about__title {
+    font-size: clamp(
+      3.8rem,
+      19vw,
+      5rem
+    );
+  }
+
+
+  .about__spotify iframe {
+    height: 352px;
+  }
+
+
+
+  /* ========================================
+     CONTACTO
+  ========================================= */
+
+  .contact__title {
+    font-size: clamp(
+      3rem,
+      14vw,
+      4.2rem
+    );
+
+    line-height: 0.94;
+  }
+
+
+  .contact__description {
+    font-size: 0.9rem;
+  }
+
+
+  .contact__cta {
+    min-height: 60px;
+  }
+
+
+  .contact__bottom {
+    width: 100%;
+
+    gap: 30px;
+  }
+
+
+  .contact__brand {
+    justify-self: center;
+  }
+
+
+  /* REDES 2 x 2 */
+
+  .contact__socials {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap:
+      22px 15px;
+  }
+
+
+  .contact__social-link {
+    display: block;
+
+    padding: 8px 0;
+
+    text-align: center;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.14em;
+  }
+
+
+  .contact__copyright {
+    text-align: center;
+
+    font-size: 0.62rem;
+  }
+
+} 
+
+}

@@ -1,0 +1,363 @@
+/* =========================
+   SERVICIOS
+========================= */
+
+.services {
+  position: relative;
+
+  width: 100%;
+
+  padding: 140px 0;
+
+  background-color: var(--color-black);
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.services__container {
+  width: min(
+    92%,
+    var(--container-width)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.services__header {
+  padding-bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.services__label {
+  color: var(--color-purple-light);
+
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.22em;
+}
+
+
+.services__number {
+  color: var(--color-gray);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================
+   INTRODUCCIÓN
+========================= */
+
+.services__intro {
+  margin-top: 70px;
+  margin-bottom: 80px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 80px;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.services__title {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-size: clamp(
+    3.2rem,
+    5vw,
+    5.5rem
+  );
+
+  font-weight: 600;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+
+.services__title span {
+  display: block;
+
+  color: var(--color-purple-light);
+}
+
+
+/* =========================
+   DESCRIPCIÓN
+========================= */
+
+.services__description {
+  max-width: 330px;
+
+  margin: 0;
+
+  color: var(--color-gray);
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   GRID 2 x 2
+========================= */
+
+.services__grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1px;
+
+  background-color:
+    rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================
+   TARJETA
+========================= */
+
+.service-card {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  min-height: 460px;
+
+  overflow: hidden;
+
+  background-color: var(--color-black);
+}
+
+
+/* =========================
+   IMAGEN
+========================= */
+
+.service-card__image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center 68%;
+
+  transform: scale(1);
+
+  transform-origin: center center;
+
+  will-change: transform;
+
+  transition:
+    transform 900ms
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+/* =========================
+   CAPA OSCURA
+========================= */
+
+.service-card__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 5, 5, 0.08) 0%,
+      rgba(5, 5, 5, 0.18) 30%,
+      rgba(5, 5, 5, 0.72) 70%,
+      rgba(5, 5, 5, 0.98) 100%
+    );
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.service-card__content {
+  position: relative;
+
+  z-index: 2;
+
+  min-height: 460px;
+
+  padding: 35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+}
+
+
+/* =========================
+   NÚMERO
+========================= */
+
+.service-card__number {
+  position: absolute;
+
+  top: 32px;
+  left: 35px;
+
+  color: var(--color-purple-light);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================
+   FLECHA
+========================= */
+
+.service-card__arrow {
+  position: absolute;
+
+  top: 25px;
+  right: 35px;
+
+  color: var(--color-white);
+
+  font-size: 1.8rem;
+
+  transition:
+    color 400ms ease,
+    transform 600ms
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.service-card__title {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-size: clamp(
+    1.7rem,
+    2.5vw,
+    2.4rem
+  );
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.service-card__text {
+  max-width: 450px;
+
+  margin-top: 20px;
+
+  color: var(--color-gray);
+
+  font-size: 0.92rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.service-card:hover
+.service-card__image {
+  transform: scale(1.035);
+}
+
+
+.service-card:hover
+.service-card__arrow {
+  color: var(--color-purple-light);
+
+  transform:
+    translate(4px, -4px);
+}
+
+/* =========================
+   AJUSTE IMÁGENES 03 Y 04
+========================= */
+
+.service-card__image--beat {
+  object-position: center 50%;
+}
+
+.service-card__image--custom {
+  object-position: center 28%;
+}

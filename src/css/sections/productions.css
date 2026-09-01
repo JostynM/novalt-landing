@@ -1,0 +1,294 @@
+/* =========================
+   PRODUCCIONES
+========================= */
+
+.productions {
+  position: relative;
+
+  width: 100%;
+
+  padding: 140px 0;
+
+  overflow: hidden;
+
+  background-color: var(--color-black);
+}
+
+
+/* =========================
+   FONDO BORROSO
+========================= */
+
+.productions::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -50px;
+
+  background-image:
+    url("../../assets/imagenes/fondo-producciones.jpg");
+
+  background-size: cover;
+
+  background-position: center 58%;
+
+  filter: blur(4px);
+
+  transform: scale(1.1);
+
+  opacity: 0.48;
+
+  z-index: 0;
+}
+
+
+/* =========================
+   CAPA OSCURA
+========================= */
+
+.productions::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 5, 5, 0.72) 0%,
+      rgba(5, 5, 5, 0.52) 35%,
+      rgba(5, 5, 5, 0.58) 70%,
+      rgba(5, 5, 5, 0.78) 100%
+    );
+
+  z-index: 1;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.productions__container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(
+    92%,
+    var(--container-width)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.productions__header {
+  padding-bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.productions__label {
+  color: var(--color-purple-light);
+
+  font-size: 0.75rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.22em;
+}
+
+
+.productions__number {
+  color: var(--color-gray);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================
+   INTRODUCCIÓN
+========================= */
+
+.productions__intro {
+  margin-top: 70px;
+  margin-bottom: 100px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 80px;
+}
+
+
+.productions__title {
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-size: clamp(
+    3.2rem,
+    5vw,
+    5.5rem
+  );
+
+  font-weight: 600;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+
+.productions__title span {
+  display: block;
+
+  color: var(--color-purple-light);
+}
+
+
+.productions__description {
+  max-width: 330px;
+
+  color: var(--color-gray);
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   LISTA DE PRODUCCIONES
+========================= */
+
+.productions__list {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 150px;
+}
+
+
+/* =========================
+   PRODUCCIÓN INDIVIDUAL
+========================= */
+
+.production {
+  width: min(
+    100%,
+    900px
+  );
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.production__video {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  background-color: #000;
+
+  transform-origin: center center;
+
+  will-change:
+    transform,
+    opacity,
+    filter;
+}
+
+
+.production__video iframe {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.production__info {
+  margin-top: 22px;
+
+  padding-top: 18px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 30px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.production__number {
+  color: var(--color-purple-light);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.15em;
+}
+
+
+.production__artist {
+  margin: 0 0 6px;
+
+  color: var(--color-gray);
+
+  font-size: 0.72rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.18em;
+}
+
+
+.production__title {
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-size: 1.35rem;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+}

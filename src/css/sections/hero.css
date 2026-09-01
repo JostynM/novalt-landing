@@ -1,0 +1,323 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background-color: var(--color-black);
+}
+
+
+/* =========================
+   IMAGEN PRINCIPAL
+========================= */
+
+.hero__media {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 64%;
+  height: 100%;
+
+  overflow: hidden;
+
+  z-index: 0;
+}
+
+
+.hero__media img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: 55% center;
+}
+
+
+/* =========================
+   DEGRADADO
+========================= */
+
+.hero__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    var(--color-black) 0%,
+    rgba(5, 5, 5, 0.98) 15%,
+    rgba(5, 5, 5, 0.85) 30%,
+    rgba(5, 5, 5, 0.5) 48%,
+    rgba(5, 5, 5, 0.15) 70%,
+    transparent 100%
+  );
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.hero__container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(
+    92%,
+    var(--container-width)
+  );
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  padding-top: var(--header-height);
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.hero__content {
+  width: 100%;
+  max-width: 680px;
+}
+
+
+/* =========================
+   ESPECIALIDADES
+========================= */
+
+.hero__eyebrow {
+  margin-bottom: 22px;
+
+  color: var(--color-purple-light);
+
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.22em;
+}
+
+
+.hero__eyebrow span {
+  margin: 0 8px;
+
+  color: var(--color-purple);
+}
+
+
+/* =========================
+   NOVALT
+========================= */
+
+.hero__title {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-size: clamp(
+    6rem,
+    8.5vw,
+    9rem
+  );
+
+  font-weight: 800;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================
+   YOU GO CRAZY
+========================= */
+
+.hero__tagline {
+  margin-top: 20px;
+
+  color: var(--color-white);
+
+  font-size: 1.15rem;
+  font-weight: 400;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.42em;
+}
+
+
+/* =========================
+   LÍNEA MORADA
+========================= */
+
+.hero__line {
+  width: 85px;
+  height: 3px;
+
+  margin-top: 26px;
+  margin-bottom: 26px;
+
+  background-color: var(--color-purple);
+}
+
+
+/* =========================
+   DESCRIPCIÓN
+========================= */
+
+.hero__description {
+  margin: 0;
+
+  color: var(--color-gray);
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.hero__actions {
+  margin-top: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+}
+
+
+/* =========================
+   DESLIZA
+========================= */
+
+.hero__scroll {
+  position: absolute;
+
+  left: 0;
+  bottom: 28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  color: var(--color-white);
+
+  font-size: 0.68rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.25em;
+}
+
+
+/* =========================
+   FLECHA
+========================= */
+
+.hero__scroll-arrow {
+  color: var(--color-purple);
+
+  font-size: 1.5rem;
+
+  line-height: 1;
+}
+
+.hero__title.is-typing::after {
+  content: "|";
+
+  margin-left: 8px;
+
+  color: var(--color-purple);
+
+  font-weight: 300;
+
+  animation: blinkCursor 0.7s step-end infinite;
+}
+
+
+@keyframes blinkCursor {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* =========================
+   EFECTO PINTADO NOVALT
+========================= */
+
+.hero__title-text {
+  display: block;
+
+  clip-path: inset(
+    0 100% 0 0
+  );
+
+  will-change: clip-path;
+}
+
+
+/* Brocha / línea que recorre el texto */
+
+.hero__paint-brush {
+  position: absolute;
+
+  top: 5%;
+  left: 0;
+
+  width: 8px;
+  height: 90%;
+
+  background-color: var(--color-purple);
+
+  box-shadow:
+    0 0 12px rgba(140, 53, 255, 0.7);
+
+  opacity: 0;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+}

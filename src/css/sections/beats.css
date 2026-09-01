@@ -1,0 +1,280 @@
+/* =========================
+   BEATS
+========================= */
+
+.beats {
+  position: relative;
+
+  width: 100%;
+
+  padding: 140px 0;
+
+  background-color: var(--color-black);
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.beats__container {
+  width: min(
+    92%,
+    var(--container-width)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.beats__header {
+  padding-bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.beats__label {
+  color: var(--color-purple-light);
+
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.22em;
+}
+
+
+.beats__number {
+  color: var(--color-gray);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================
+   INTRODUCCIÓN
+========================= */
+
+.beats__intro {
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 80px;
+}
+
+
+.beats__title {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-size: clamp(
+    3.2rem,
+    5vw,
+    5.5rem
+  );
+
+  font-weight: 600;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+
+  text-transform: uppercase;
+}
+
+
+.beats__title span {
+  display: block;
+
+  color: var(--color-purple-light);
+}
+
+
+.beats__description {
+  max-width: 330px;
+
+  margin: 0;
+
+  color: var(--color-gray);
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.beats__grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 40px;
+}
+
+
+/* =========================
+   TARJETA
+========================= */
+
+.beat-card {
+  display: block;
+
+  text-decoration: none;
+}
+
+
+.beat-card__media {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  background-color: #111111;
+}
+
+
+.beat-card__image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transform: scale(1);
+
+  transition:
+    transform 800ms cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.beat-card__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 5, 5, 0.05) 0%,
+      rgba(5, 5, 5, 0.08) 50%,
+      rgba(5, 5, 5, 0.18) 100%
+    );
+
+  transition:
+    background-color var(--transition-normal);
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.beat-card__content {
+  padding-top: 22px;
+}
+
+
+.beat-card__meta {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #b08a4d;
+
+  font-size: 0.72rem;
+  font-weight: 500;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+
+.beat-card__title {
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-size: 1.65rem;
+  font-weight: 600;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.02em;
+
+  text-transform: uppercase;
+
+  transition:
+    color var(--transition-normal);
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.beat-card:hover .beat-card__image {
+  transform: scale(1.05);
+}
+
+
+.beat-card:hover .beat-card__title {
+  color: var(--color-purple-light);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.beats__footer {
+  margin-top: 55px;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+
+.beats__button {
+  min-width: 260px;
+}
