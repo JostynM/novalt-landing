@@ -14,6 +14,7 @@ import "./css/sections/contact.css";
 
 import "./css/responsive.css";
 
+import { inject } from "@vercel/analytics";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { initMobileMenu } from "./js/modules/mobileMenu.js";
@@ -24,6 +25,9 @@ import { initServicesAnimation } from "./js/animations/servicesAnimation.js";
 import { initProductionsAnimation } from "./js/animations/productionsAnimation.js";
 import { initBeatsAnimation } from "./js/animations/beatsAnimation.js";
 
+
+/* Initialize Vercel Analytics */
+inject();
 
 /* Evita que el navegador restaure
    automáticamente la posición anterior */
